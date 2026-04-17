@@ -1,3 +1,88 @@
-body {
-  background-color: lightblue;
+/* Choosen theme colors */
+:root {
+  --color-primary: darkblue;
+  --color-theme: cyan;
+  --color-bg: rgb(15, 25, 23);
+  --color-text: white;
 }
+*{
+  margin: 0;
+  padding: 0;
+  color: var(--color-text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+  background-color: var(--color-bg);
+}
+
+/* navigation bar start */
+/* logo and company name left side of navigation bar */
+nav{
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+nav .logo{
+  flex: 4;
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+}
+nav .logo img{
+  width: 2em;
+}
+nav .logo .title{
+  font-size: 1.3em;
+  font-weight: 500;
+  color: var(--color-theme);
+  font-family: Satisfy, Arial, Helvetica, sans-serif;
+}
+
+/* menu part right side of navigation bar */
+nav .menu{
+  flex: 6;
+  display: flex;
+}
+nav .menu input{
+  visibility: hidden;
+  display: none;
+}
+nav .menu label a,i{
+  color: var(--color-theme);
+  font-size: 0.9em;
+}
+nav .menu label a{
+  text-decoration: none;
+}
+nav .menu .buttons{
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+nav .menu .buttons label{
+  margin: 6px;
+  padding-bottom: 6px;
+  padding-top: 3px;
+  flex: 2.5;
+  text-align: center;
+  opacity: 0.6;
+  transition: border-color 0.3s ease, opacity 0.3s ease;
+}
+nav .menu .buttons label:hover{
+  opacity: 1;
+  filter: drop-shadow(0 0 10px rgb(52, 195, 223)) drop-shadow(0 0 20px rgb(52, 195, 223));
+}
+nav .menu input:nth-child(1):checked ~ .buttons label:nth-child(1),
+nav .menu input:nth-child(2):checked ~ .buttons label:nth-child(2),
+nav .menu input:nth-child(3):checked ~ .buttons label:nth-child(3),
+nav .menu input:nth-child(4):checked ~ .buttons label:nth-child(4)
+{
+  border-bottom: 2px solid rgb(232, 232, 63);
+  opacity: 1;
+}
+/* navigation bar end */

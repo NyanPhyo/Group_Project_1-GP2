@@ -86,3 +86,55 @@ nav .menu input:nth-child(4):checked ~ .buttons label:nth-child(4)
   opacity: 1;
 }
 /* navigation bar end */
+
+/* banner start */
+.banner {
+  height: 65vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner .banner-bg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 0.3;
+  z-index: -1;
+}
+.banner .text{
+  z-index: 1;
+  color: var(--color-text);
+  text-align: center;
+}
+.banner .text h1{
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  color: rgb(208, 208, 208);
+  -webkit-text-stroke: 1px var(--color-theme);
+}
+.banner .text .tagline{
+  font-family: fantasy;
+  color: rgb(171, 171, 171);
+  font-size: 1.2em;
+}
+.banner .text .description{
+  color: rgba(255, 255, 255, 0.889);
+  width: 50%;
+  transform: translate(50%);
+}
+.banner .text .btn{
+  color: rgb(49, 49, 49);
+  text-decoration: none;
+  background-color: rgba(62, 237, 237, 0.759);
+  padding: 0.1em 0.7em;
+  display: inline-block;
+  margin-top: 1.3em;
+  border: 1px solid rgb(195, 195, 195);
+  border-radius: 1em;
+}

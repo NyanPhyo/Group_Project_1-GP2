@@ -39,8 +39,459 @@
 
     <!--main contain main contents of the web page-->
     <main>
-        <h1>This is about page</h1>
-    </main>
+    <section id="hero">
+      <div id="hero-image">
+        <!-- Replace src with actual hero banner -->
+        <img src="images/hero-banner.jpg" alt="Three Aung One Wai headquarters and technology division team" width="1200" height="400" />
+      </div>
+      <div id="hero-text">
+        <h2>Meet the Team Behind the Code</h2>
+        <p>
+          The Technology Division of Three Aung One Wai is a passionate group of developers,
+          analysts, and security architects united by one mission: building digital defences that
+          never sleep. Below you will find the people who make it happen.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 1 — GROUP IDENTITY (Nested List)
+    ════════════════════════════════════════════════ -->
+    <section id="group-identity">
+      <h2>Group Identity</h2>
+
+      <div class="section-block">
+        <div class="section-image">
+          <!-- Replace src with actual team division photo -->
+          <img src="images/division-badge.png" alt="Technology Division badge and group identifier" width="300" height="300" />
+        </div>
+        <div class="section-text">
+          <h3>Who We Are</h3>
+          <p>
+            We are <strong>Group Nexus</strong> — the Technology Division development team of Three Aung One Wai.
+            Below are our group details, including our class schedule and the modules we are enrolled in
+            as part of our professional development programme.
+          </p>
+
+          <!-- REQUIRED: Nested List — Group name + class day/time -->
+          <ul>
+            <li>
+              <strong>Group Name:</strong> Group Nexus
+              <ul>
+                <li>Division: Technology &amp; Software Engineering</li>
+                <li>Company: Three Aung One Wai</li>
+                <li>Project: Corporate Website Redesign</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Class Details:</strong>
+              <ul>
+                <li>Subject: Web Technology Project (COS10026)</li>
+                <li>
+                  Class Schedule:
+                  <ul>
+                    <li>Lecture &mdash; Monday, 10:00 AM &ndash; 12:00 PM (Room B204)</li>
+                    <li>Lab &mdash; Wednesday, 2:00 PM &ndash; 4:00 PM (Computer Lab 3)</li>
+                    <li>Tutorial &mdash; Friday, 11:00 AM &ndash; 12:00 PM (Room C101)</li>
+                  </ul>
+                </li>
+                <li>Semester: March, 2026</li>
+                <li>Instructor: PAWANI T.RASARATNAM</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Group Roles:</strong>
+              <ul>
+                <li>Security Engineer: Aung Khant Zaw</li>
+                <li>Software Developers: Nyan Phyo Aung</li>
+                <li>Threat Analysts: Wai Phyo Htet</li>
+                <li>DevOps / Cloud Engineers: Htoo Aung Than Htaik</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 2 — GROUP PHOTO (Figure + Caption)
+    ════════════════════════════════════════════════ -->
+    <section id="group-photo-section">
+      <h2>Our Team</h2>
+
+      <div class="section-block">
+        <div class="section-image">
+          <!-- REQUIRED: <figure> with group photo under 300KB + caption -->
+          <figure>
+            <img
+              src="images/group-photo.jpg"
+              alt="Group Nexus — the five members of Three Aung One Wai Technology Division standing together in the office"
+              width="600"
+              height="400"
+            />
+            <figcaption>
+              <strong>Group Nexus &mdash; Technology Division, Three Aung One Wai.</strong>
+              From left to right: Chloe Tan Mei Ling, Darren Lim Wei Xiang (Group Leader),
+              Priya Subramaniam, Muhammad Hafiz bin Roslan. Photographed at Three Aung One Wai HQ, Kuala Lumpur, 2025.
+              <br />
+              <em>(File size: &lt; 300 KB &mdash; optimised for web delivery.)</em>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="section-text">
+          <h3>A Snapshot of Group Nexus</h3>
+          <p>
+            Four students. Four different backgrounds. One shared vision.
+            Group Nexus was formed at the start of Semester 1 with a single goal: deliver a world-class
+            corporate website for the Technology Division of Three Aung One Wai.
+          </p>
+          <p>
+            Together, we bring expertise in front-end development, UI design, content strategy,
+            quality assurance, and cybersecurity domain knowledge. Every page of this website
+            reflects hours of collaboration, peer review, and creative problem-solving.
+          </p>
+          <p>
+            We meet three times a week — twice in class and once for a dedicated group working session
+            every Thursday evening — to ensure the project stays on track and every team member's
+            voice is heard.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 3 — MEMBER PROFILES (Definition List)
+    ════════════════════════════════════════════════ -->
+    <section id="member-profiles">
+      <h2>Member Contributions &amp; Profiles</h2>
+      <p>
+        Each team member brings a unique skill set to Group Nexus. Below you will find each member's
+        role, personal quote, their first or favourite programming language, and a phrase from their
+        native language or culture to represent their background.
+      </p>
+
+      <!-- ─── MEMBER 1: AKZ ─── -->
+      <article class="member-card">
+        <h3>Security Engineer: Aung Khant Zaw</h3>
+
+        <div class="member-block">
+          <div class="member-image">
+            <!-- Replace src with Darren's photo -->
+            <img
+              src="images/member-darren.jpg"
+              alt="Portrait of Aung Khant Zaw"
+              width="250"
+              height="300"
+            />
+          </div>
+          <div class="member-text">
+            <!-- REQUIRED: Definition List — contributions, quotes, language + translation -->
+            <dl>
+              <dt>Role &amp; Contributions</dt>
+              <dd>Responsible for protecting systems, networks, and data from cyber threats. Designs security architectures, conducts vulnerability assessments, implements encryption, and responds to incidents. Works closely with developers and DevOps to ensure secure coding and deployment practices.</dd>
+
+              <dt>Personal Quote</dt>
+              <dd><q>“Security isn’t a feature—it’s a foundation.”</q></dd>
+
+              <dt>First Programming Language</dt>
+              <dd>Python</dd>
+
+              <dt>Favourite Programming Language</dt>
+              <dd>Python (for scripting, automation, and security tools)</dd>
+
+        
+            </dl>
+          </div>
+        </div>
+      </article>
+
+      <!-- ─── MEMBER 2: Nyan Phyo Aung ─── -->
+      <article class="member-card">
+        <h3>Software Developers: Nyan Phyo Aung</h3>
+
+        <div class="member-block">
+          <div class="member-image">
+            <!-- Replace src with Priya's photo -->
+            <img
+              src="images/member-priya.jpg"
+              alt="Portrait of Nyan Phyo Aung"
+              width="250"
+              height="300"
+            />
+          </div>
+          <div class="member-text">
+            <dl>
+              <dt>Role &amp; Contributions</dt>
+              <dd>Builds and maintains applications by writing clean, efficient code. Translates requirements into functional software, debugs issues, and collaborates with designers, testers, and engineers to deliver user-focused solutions.</dd>
+
+              <dt>Personal Quote</dt>
+              <dd><q>“Good code solves problems; great code prevents them.”</q></dd>
+
+              <dt>First Programming Language</dt>
+              <dd>Java</dd>
+
+              <dt>Favourite Programming Language</dt>
+              <dd>JavaScript (for its versatility across frontend and backend)</dd>
+
+          
+            </dl>
+          </div>
+        </div>
+      </article>
+
+      <!-- ─── MEMBER 3: Wai Phyo Htet ─── -->
+      <article class="member-card">
+        <h3>Threat Analysts: Wai Phyo Htet</h3>
+
+        <div class="member-block">
+          <div class="member-image">
+            <!-- Replace src with Hafiz's photo -->
+            <img
+              src="images/member-hafiz.jpg"
+              alt="Portrait of Wai Phyo Htet"
+              width="250"
+              height="300"
+            />
+          </div>
+          <div class="member-text">
+            <dl>
+              <dt>Role &amp; Contributions</dt>
+              <dd>Monitors, detects, and analyzes cyber threats. Investigates suspicious activities, studies attack patterns, and provides actionable intelligence to prevent breaches. Often works in Security Operations Centers (SOC).</dd>
+
+              <dt>Personal Quote</dt>
+              <dd><q>“Every alert tells a story—my job is to read it before it’s too late.”</q></dd>
+
+              <dt>First Programming Language</dt>
+              <dd>C</dd>
+
+              <dt>Favourite Programming Language</dt>
+              <dd>Python (for data analysis and threat hunting automation)</dd>
+
+              
+            </dl>
+          </div>
+        </div>
+      </article>
+
+      <!-- ─── MEMBER 4: Htoo Aung Than Htaik ─── -->
+      <article class="member-card">
+        <h3>DevOps / Cloud Engineers: Htoo Aung Than Htaik</h3>
+
+        <div class="member-block">
+          <div class="member-image">
+            <!-- Replace src with Chloe's photo -->
+            <img
+              src="resources/images/HA.jpeg"
+              alt="Portrait of Htoo Aung Than Htaik"
+              width="250"
+              height="300"
+            />
+          </div>
+          <div class="member-text">
+            <dl>
+              <dt>Role &amp; Contributions</dt>
+              <dd>Bridges development and operations by automating infrastructure, deployments, and monitoring. Manages cloud platforms, CI/CD pipelines, and ensures scalability, reliability, and performance of systems.</dd>
+
+              <dt>Personal Quote</dt>
+              <dd><q>“If it’s not automated, it’s a risk.”</q></dd>
+
+              <dt>First Programming Language</dt>
+              <dd>Python</dd>
+
+              <dt>Favourite Programming Language</dt>
+              <dd>JavaScript (for building automation tools and working with cloud-based applications)</dd>
+
+              
+            </dl>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 4 — FUN FACTS TABLE
+    ════════════════════════════════════════════════ -->
+    <section id="fun-facts">
+      <h2>Fun Facts About Group Nexus</h2>
+
+      <div class="section-block">
+        <div class="section-image">
+          <!-- Replace src with a fun team illustration or candid photo -->
+          <img
+            src="images/fun-facts-illustration.png"
+            alt="Illustrated icons representing team hobbies and fun facts"
+            width="300"
+            height="350"
+          />
+        </div>
+        <div class="section-text">
+          <p>
+            Behind every great line of code is a human with a fascinating story.
+            Here are some light-hearted facts about our team members that you will not find
+            on any professional résumé.
+          </p>
+
+          <!-- REQUIRED: Table with caption -->
+          <table>
+            <caption>
+              <strong>Group Nexus &mdash; Fun Facts at a Glance</strong>
+              <br />
+              <em>A look at the people behind the keyboards: dream jobs, coding snacks, hometowns, and more.</em>
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Member</th>
+                <th scope="col">Hometown</th>
+                <th scope="col">Dream Job (If Not a Developer)</th>
+                
+                <th scope="col">Hidden Talent</th>
+                <th scope="col">Favourite Cybersecurity Movie / Show</th>
+                <th scope="col">Hours of Sleep (on deadline night)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Aung Khant Zaw</th>
+                <td>Ayeyarwaddy, Myanmar</td>
+                <td>Formula 1 Race Strategist</td>
+          
+                <td>Can solve a Rubik's cube in under 90 seconds</td>
+                <td><cite>Mr. Robot</cite></td>
+                <td>3 hours</td>
+              </tr>
+              <tr>
+                <th scope="row">Nyan Phyo Aung</th>
+                <td>Kayan, Myanmar</td>
+                <td>Children's Book Illustrator</td>
+                
+                <td>Classical Bharatanatyam dancer (10 years of training)</td>
+                <td><cite>Halt and Catch Fire</cite></td>
+                <td>4 hours</td>
+              </tr>
+              <tr>
+                <th scope="row">Wai Phyo Htet</th>
+                <td>Mandalay, Myanmar</td>
+                <td>Marine Biologist</td>
+                
+                <td>Can name every Malaysian freshwater fish by sight</td>
+                <td><cite>Black Mirror</cite></td>
+                <td>2 hours</td>
+              </tr>
+              <tr>
+                <th scope="row">Htoo Aung Than Htaik</th>
+                <td>Yangon, Myanmar</td>
+                <td>Interior Designer</td>
+                
+                <td>Watercolour painting — sells prints online</td>
+                <td><cite>Power Ranger SPD</cite></td>
+                <td>5 hours</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="6">
+                  <small>
+                    All fun facts self-reported by members during our Week 2 ice-breaker session.
+                    Sleep hours refer to the night before our Assignment 1 submission deadline.
+                  </small>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 5 — OUR MISSION AS A TEAM
+    ════════════════════════════════════════════════ -->
+    <section id="team-mission">
+      <h2>Our Mission as a Team</h2>
+
+      <div class="section-block">
+        <div class="section-image">
+          <!-- Replace src with a mission/values image -->
+          <img
+            src="images/mission-graphic.png"
+            alt="Shield icon representing Three Aung One Wai core values of integrity, innovation and protection"
+            width="300"
+            height="300"
+          />
+        </div>
+        <div class="section-text">
+          <h3>Why We Build What We Build</h3>
+          <p>
+            Three Aung One Wai was founded on the belief that robust cybersecurity should not be
+            the exclusive privilege of large corporations. Our Technology Division exists to bridge the
+            gap — developing scalable, intelligent, and human-centred digital tools that empower
+            businesses of every size to protect what matters most.
+          </p>
+          <p>
+            As the team tasked with representing this mission through the company's public-facing website,
+            Group Nexus takes immense pride in every HTML element, every carefully chosen word, and every
+            image that appears on these pages. This site is not just a university assignment — it is a
+            living showcase of what we can collectively achieve.
+          </p>
+          <blockquote cite="https://www.threeaungonewai.example.com/mission">
+            <p>
+              "We don't just write code. We build trust — one secure, thoughtful, accessible
+              line at a time."
+            </p>
+            <footer>— Group Nexus, Technology Division, Three Aung One Wai</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 6 — ACKNOWLEDGEMENTS
+    ════════════════════════════════════════════════ -->
+    <section id="acknowledgements">
+      <h2>Acknowledgements</h2>
+
+      <div class="section-block">
+        <div class="section-image">
+          <!-- Replace src with a thank-you or handshake illustration -->
+          <img
+            src="images/acknowledgements.png"
+            alt="Handshake icon representing gratitude and collaboration"
+            width="280"
+            height="280"
+          />
+        </div>
+        <div class="section-text">
+          <p>
+            Group Nexus would like to extend sincere gratitude to the following individuals and
+            resources that made this project possible:
+          </p>
+          <ol>
+            <li>
+              <strong>Dr. Amirah binti Hassan</strong> — for her patient guidance, detailed feedback
+              on our wireframes, and her genuine enthusiasm for accessible web design.
+            </li>
+            <li>
+              <strong>Our classmates in WEB1101</strong> — for peer-review sessions that challenged
+              us to refine and rethink our design decisions.
+            </li>
+            <li>
+              <strong>The W3C Web Accessibility Initiative (WAI)</strong> — for publicly available
+              guidelines that shaped our approach to semantic, inclusive HTML.
+            </li>
+            <li>
+              <strong>MDN Web Docs</strong> — our go-to reference for every HTML element and
+              attribute used across this project.
+            </li>
+            <li>
+              <strong>Our families</strong> — for the late-night meals delivered to our desks
+              and the endless encouragement throughout this semester.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
     <!--footer contain social contact and -->
     <footer>

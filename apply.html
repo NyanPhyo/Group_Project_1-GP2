@@ -39,18 +39,18 @@
      
     <!--main contain main contents of the web page-->
     <main>
-        <h1>This is apply page</h1>
+        <h1>Apply to join our family today</h1>
         <h2>Job Application  Form</h2>
         <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
             <p>
-                <label for="ref">Job Refrence Number</label><br>
+                <label for="ref">Job Reference Number</label><br>
                 <input type="text" name="ref" id="ref" required pattern="[A-Za-z0-9]{5}" placeholder="A1B2C">
             </p>
             <fieldset>
                 <legend>Personal Information</legend>
                  <p>   
                     <label for="fname" >First Name</label><br>
-                    <input type="text" id="fname" name="fname" required pattern="[A-Za-z]{1,20}" maxlength="20"  placeholder="Henry">
+                    <input type="text" id="fname" name="fname" required pattern="[A-Za-z]{1,20}" maxlength="20"  placeholder="Eg.Henry">
                 </p>
                 <p>
                     <label for="lname">Last Name</label><br>
@@ -60,7 +60,7 @@
                
                 <p>
                     <label for="bday">Date of Birth</label><br>
-                    <input type="date" id="bday" name="bday" required placeholder="dd/mm/yyyy">
+                    <input type="text" id="bday" name="bday" required placeholder="dd/mm/yyyy" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\d{4}">
                 </p>
                 
              
@@ -74,14 +74,14 @@
                 
                </fieldset>
             <fieldset>
-                <legend>Adress</legend>
+                <legend>Address</legend>
                 <p>
-                    <label for="street">Street Adress</label><br>
+                    <label for="street">Street Address</label><br>
                     <input type="text" name="street" id="street" maxlength="40" required>
                   
                 </p>
                  <p>
-                    <label for="town">Subrub/Town</label><br>
+                    <label for="town">Suburb/Town</label><br>
                     <input type="text" name="town" id="town" maxlength="40" required>
                   
                 </p>
@@ -110,7 +110,7 @@
             <fieldset>
                 <legend>Contact Details</legend>
                    <p>
-                    <label for="email">Email Adress:  </label><br>
+                    <label for="email">Email Aderess:  </label><br>
                     <input type="email" name="email" id="email" placeholder="WaiPhyo@gmail.com" required>
                 </p>
                 <p>
@@ -120,23 +120,24 @@
             </fieldset>
         
             <fieldset>
-                <legend>Techinical Skills</legend>
-                <p>Select Your Revelent Skills</p>
-                <label><input type="checkbox" name="skills[]"  value="networking">Networking</label><br>
+                <legend>Technical Skills</legend>
+                <p>Select Your Relevant Skills</p>
+                <label><input type="checkbox" name="skills[]" value="networking">Networking</label><br>
                 <label><input type="checkbox" name="skills[]" value="cybersecurity">Cybersecurity</label><br>
                 <label><input type="checkbox" name="skills[]" value="python">Python</label><br>
-                <label><input type="checkbox" name="skills[]" value="pen_testing">Pentration Testing</label><br>
+                <label><input type="checkbox" name="skills[]" value="pen_testing">Penetration Testing</label><br>
                 <label><input type="checkbox" name="skills[]" value="devops">DevOps</label><br>
-                <label><input type="checkbox" name="skills[]" value="cluod">Cloud</label><br>
+                <label><input type="checkbox" name="skills[]" value="linux">Linux</label><br>
+                <label><input type="checkbox" name="skills[]" value="cloud">Cloud</label><br>
                 <p>
                     <label for="others"><input type="checkbox" id="others" name="skills[]" value="others">Other Skills..</label>
 
                 </p>
                 <label for="otherskills">Please Specify</label><br>
-                 <textarea name="otherskills" id="otherskills" rows="4" placeholder="Pleas enter additional skills"></textarea>
+                 <textarea name="otherskills" id="otherskills" rows="4" minlength="10" placeholder="Pleas enter additional skills"></textarea>
             </fieldset>
             <p>
-                <button type="submit">Summit Application</button>
+                <button type="submit">Submit Application</button>
             </p>
 
 
@@ -144,9 +145,19 @@
     </main>
 
     <!--footer contain social contact and -->
-    <footer>
+   <footer>
 
-    </footer>
+  <p><strong>3A1W Cybersecurity</strong></p>
+  <p>Securing the future through technology</p>
+
+  <p>
+    Email: <a href="mailto:info@3a1w.com">info@3a1w.com</a> |
+    Phone: +60 12-345 6789
+  </p>
+
+  <p>&copy; 2026 3A1W Cybersecurity. All rights reserved.</p>
+
+</footer>
 </body>
 </html>
 

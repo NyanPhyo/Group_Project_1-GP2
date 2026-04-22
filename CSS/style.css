@@ -13,9 +13,12 @@
 }
 body{
   background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* navigation bar start */
+/* navigation all pages bar start */
 /* logo and company name left side of navigation bar */
 nav{
   width: 100%;
@@ -85,11 +88,52 @@ nav .menu input:nth-child(4):checked ~ .buttons label:nth-child(4)
   border-bottom: 2px solid rgb(232, 232, 63);
   opacity: 1;
 }
-/* navigation bar end */
+/* navigation bar all page end */
 
-/* banner start */
+/* main flex to fill the page */
+main{
+  flex: 1;
+}
+/* footer all pages start */
+footer {
+  margin-top: 1em;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: rgba(20, 35, 40, 0.9);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+footer .socials {
+  flex: 3;
+  padding: 0.2em;
+  padding-bottom: 0;
+  padding-left: 1.5em;
+}
+
+footer .credits {
+  flex: 7;
+  color: rgb(218, 218, 218);
+  font-family: cursive;
+  margin: 0;
+  text-align: right;
+  padding-right: 1.5em;
+  font-size: 0.9em;
+}
+
+footer .socials img {
+  width: 1.1em;
+  border: 2px solid rgb(164, 164, 164);
+  border-radius: 7px;
+  padding: 2px;
+  margin-left: 0.2em;
+}
+/* banner of home page start */
 .banner {
-  height: 65vh;
+  min-height: 65vh;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -128,13 +172,127 @@ nav .menu input:nth-child(4):checked ~ .buttons label:nth-child(4)
   width: 50%;
   transform: translate(50%);
 }
-.banner .text .btn{
+.btn{
   color: rgb(49, 49, 49);
   text-decoration: none;
-  background-color: rgba(62, 237, 237, 0.759);
+  background-color: rgba(62, 237, 237, 0.8);
   padding: 0.1em 0.7em;
   display: inline-block;
   margin-top: 1.3em;
   border: 1px solid rgb(195, 195, 195);
   border-radius: 1em;
+}
+.btn:hover{
+  background-color: rgba(62, 237, 237);
+  border: 1px solid rgb(221, 221, 221)
+}
+/* banner of home page end */
+
+
+
+/* Jobs page styling start here */
+.jobs{
+  margin-top: 1em;
+  display: flex;
+  min-height: 100vh;
+}
+.jobs input{
+  display: none;
+  visibility: hidden;
+}
+.jobs .sidebar{
+  float: left;
+  flex: 3;
+  margin: 1em;
+  overflow-y: auto;
+}
+.jobs .sidebar h2{
+  font-size: 1.8em;
+  margin-bottom: 0.8em;
+  text-align: center;
+    -webkit-text-stroke: 1px rgba(0, 255, 255, 0.4);
+}
+.jobs .sidebar .job-card{
+  width: auto;
+  display: inline-block;
+  border: 2px solid var(--color-theme);
+  padding: 0.6em;
+  margin-bottom: 1em;
+  border-radius: 7px;
+  background-color: rgba(0, 255, 255, 0.1);
+}
+.jobs .sidebar .job-card h3{
+  font-size: 1.2em;
+  margin-bottom: 0.4em;
+}
+.jobs .sidebar .job-card .company{
+  font-family: fantasy;
+  color: rgb(171, 171, 171);
+  font-size: 0.7em;
+  letter-spacing: 1px;
+}
+.jobs .sidebar .job-card .salary{
+  font-size: 0.7em;
+  color: var(--color-theme);
+  margin-bottom: 0.5em;
+}
+.jobs .sidebar .job-card .desc{
+  font-size: 0.8em;
+  color: rgba(226, 226, 226, 0.9);
+}
+.jobs .sidebar::-webkit-scrollbar,
+.jobs .details::-webkit-scrollbar {
+  display: none;
+}
+
+/* detail part (right side) start here */
+.jobs .details{
+  background-color: rgba(141, 141, 141, 0.33);
+  float: right;
+  flex: 8;
+  border: 2px solid rgb(186, 186, 186);
+  border-radius: 7px;
+  margin: 1em;
+  padding: 1em;
+  color: rgb(200, 200, 200);
+  overflow-y: auto;
+  height: fit-content;
+}
+.jobs .details .content ul,ol{
+  list-style-position: inside;
+  padding: 0;
+}
+.jobs .details .content li{
+  font-size: 1em;
+  color: rgba(226, 226, 226, 0.9);
+}
+.jobs .details article{
+  display: none;
+}
+.jobs .details .content .ref{
+  color: rgb(213, 157, 14);
+}
+.jobs .details .content h1{
+  font-size: 1.7em;
+  color: rgba(0, 209, 209, 0.826);
+}
+.jobs .details .content h2{
+  font-size: 1.4em;
+  margin-top: 0.5em;
+  color: rgb(96, 190, 159);
+}
+.jobs .details .content p{
+  font-size: 1em;
+  color: rgba(226, 226, 226, 0.9);
+}
+.jobs .details .content header p:nth-of-type(3){
+  color: rgba(0, 209, 209, 0.9);
+}
+.jobs .details .content header p:nth-of-type(4){
+  color: rgba(0, 209, 209, 0.9);
+}
+.jobs input:nth-child(1):checked ~ .details article:nth-child(1),
+.jobs input:nth-child(2):checked ~ .details article:nth-child(2),
+.jobs input:nth-child(3):checked ~ .details article:nth-child(3){
+  display: block;
 }

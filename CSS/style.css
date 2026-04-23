@@ -8,7 +8,7 @@
 *{
   margin: 0;
   padding: 0;
-  /*color: var(--color-text);/*
+  color: var(--color-text);
   font-family: Arial, Helvetica, sans-serif;
 }
 body{
@@ -18,7 +18,7 @@ body{
   min-height: 100vh;
 }
 
-/* navigation all pages bar start */
+/* navigation for all pages bar start here*/
 /* logo and company name left side of navigation bar */
 nav{
   width: 100%;
@@ -29,6 +29,7 @@ nav{
   top: 0;
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 99;
 }
 nav .logo{
   flex: 4;
@@ -61,6 +62,11 @@ nav .menu label a,i{
 }
 nav .menu label a{
   text-decoration: none;
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 6px;
+  padding-top: 3px;
 }
 nav .menu .buttons{
   position: relative;
@@ -69,8 +75,6 @@ nav .menu .buttons{
 }
 nav .menu .buttons label{
   margin: 6px;
-  padding-bottom: 6px;
-  padding-top: 3px;
   flex: 2.5;
   text-align: center;
   opacity: 0.6;
@@ -88,13 +92,13 @@ nav .menu input:nth-child(4):checked ~ .buttons label:nth-child(4)
   border-bottom: 2px solid rgb(232, 232, 63);
   opacity: 1;
 }
-/* navigation bar all page end */
+/* navigation bar for all page end here*/
 
 /* main flex to fill the page */
 main{
   flex: 1;
 }
-/* footer all pages start */
+/* footer for all pages start */
 footer {
   margin-top: 1em;
   width: 100%;
@@ -131,7 +135,9 @@ footer .socials img {
   padding: 2px;
   margin-left: 0.2em;
 }
-/* banner of home page start */
+/* footer for all page end here*/
+
+/* banner of home page start here*/
 .banner {
   min-height: 65vh;
   position: relative;
@@ -172,6 +178,7 @@ footer .socials img {
   width: 50%;
   transform: translate(50%);
 }
+/* all button use same design */
 .btn{
   color: rgb(49, 49, 49);
   text-decoration: none;
@@ -186,9 +193,39 @@ footer .socials img {
   background-color: rgba(62, 237, 237);
   border: 1px solid rgb(221, 221, 221)
 }
-/* banner of home page end */
+/* banner of home page end here*/
 
-
+/* info cards of home page start here */
+/*.info-wrapper{
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+}
+.info{
+  display: grid;
+  width: min(1200px, 85%);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  padding: 2em;
+}
+.info .card{
+  border: 1px solid var(--color-theme);
+  border-radius: 1em;
+  padding: 1em;
+}
+.info .card img{
+  width: 4em;
+}
+.info .card h3{
+  margin-top: 1em;
+  margin-bottom: 0.6em;
+  color: rgb(225, 225, 67);
+}
+.info .card p{
+  font-size: 0.9em;
+  color: rgb(172, 172, 172);
+}
+*/
 
 /* Jobs page styling start here */
 .jobs{
@@ -196,6 +233,8 @@ footer .socials img {
   display: flex;
   min-height: 100vh;
 }
+
+/* sidebar left side of job page start here */
 .jobs input{
   display: none;
   visibility: hidden;
@@ -210,7 +249,7 @@ footer .socials img {
   font-size: 1.8em;
   margin-bottom: 0.8em;
   text-align: center;
-    -webkit-text-stroke: 1px rgba(0, 255, 255, 0.4);
+  -webkit-text-stroke: 1px rgba(0, 255, 255, 0.4);
 }
 .jobs .sidebar .job-card{
   width: auto;
@@ -220,6 +259,7 @@ footer .socials img {
   margin-bottom: 1em;
   border-radius: 7px;
   background-color: rgba(0, 255, 255, 0.1);
+  opacity: 0.8;
 }
 .jobs .sidebar .job-card h3{
   font-size: 1.2em;
@@ -244,6 +284,7 @@ footer .socials img {
 .jobs .details::-webkit-scrollbar {
   display: none;
 }
+/* sidebar left size of job page end her */
 
 /* detail part (right side) start here */
 .jobs .details{
@@ -296,3 +337,71 @@ footer .socials img {
 .jobs input:nth-child(3):checked ~ .details article:nth-child(3){
   display: block;
 }
+.jobs input:nth-child(1):checked ~ aside label:nth-of-type(1),
+.jobs input:nth-child(2):checked ~ aside label:nth-of-type(2),
+.jobs input:nth-child(3):checked ~ aside label:nth-of-type(3){
+  opacity: 1;
+  filter: drop-shadow(0 0 10px rgb(48, 181, 207));
+}
+.jobs aside label:nth-of-type(1):hover,
+.jobs aside label:nth-of-type(2):hover,
+.jobs aside label:nth-of-type(3):hover{
+  opacity: 1;
+  filter: drop-shadow(0 0 10px rgb(48, 181, 207));
+}
+/* detail part (right side) end here */
+/* jobpage styling end here */
+
+/* apply page styling start here */
+.apply_page{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.apply_page h1{ 
+  text-align: center;
+  -webkit-text-stroke: 1px rgba(0, 255, 255, 0.4);
+  margin: 0.5em 0;
+}
+.apply_page form{
+  padding: 2em;
+  width: min(1000px, 55%);
+  border: 1px solid var(--color-theme);
+  border-radius: 1em;
+}
+.apply_page form input, select, textarea{
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid grey;
+  padding: 0.2em;
+}
+.apply_page form select option {
+  background-color: #0f1917;
+  color: white;
+}
+.apply_page form fieldset{
+  border: 1px solid yellow;
+  border-radius: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em;
+  gap: 1em;
+  margin: 1em 0;
+}
+.apply_page form legend{
+  color: var(--color-theme);
+  border: 1px solid rgb(0, 128, 115);
+  padding: 0.3em;
+  border-radius: 1em;
+}
+
+.apply_page form fieldset > p {
+  flex: 1 1 calc(50% - 1rem);
+  display: flex;
+  flex-direction: column;
+}
+.apply_page form .personal_info .radio{
+  flex: 100%;
+}
+
+/* apply page styling end here */

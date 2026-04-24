@@ -196,7 +196,7 @@ footer .socials img {
 /* banner of home page end here*/
 
 /* info cards of home page start here */
-/*.info-wrapper{
+.info-wrapper{
   display: flex;
   justify-content: center;
   margin-top: 3em;
@@ -225,7 +225,7 @@ footer .socials img {
   font-size: 0.9em;
   color: rgb(172, 172, 172);
 }
-*/
+
 
 /* Jobs page styling start here */
 .jobs{

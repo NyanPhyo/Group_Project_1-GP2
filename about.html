@@ -37,113 +37,117 @@
     </nav>
         
     <!--main contain main contents of the web page-->
-    <main id="main-content">
+    <main id="main-content" class="about-page">
       <!--                  WEB TEAM SECTION                         -->
-      <section id="web-team" aria-labelledby="team-section-heading">
+      <section id="web-team" class="member-info" aria-labelledby="team-section-heading">
         <h1 id="team-section-heading">Meet the Web Development Team</h1>
-        <p>
+        <p id="team-section-text">
           The website you are reading was designed and built by students from the web-development team
           as part of a group project. Here is a little about the people behind it.
         </p>
 
         <!-- ── GROUP INFO (nested list) ── -->
         <section id="group-info" aria-labelledby="group-info-heading">
-          
-          <div id="group-info-text">
-            <h2 id="group-info-heading">Group Details</h2>
-            <ul>
-                <li>
-                  <strong>Group Name:</strong> Three Aung One Wai
-                  <ul>
-                    <li><strong>Monday</strong>
-                      <ul>
-                        <li>Cos 10004: 2:00 PM – 4:00 PM</li>
-                        <li>Cos 10009: 4:00 PM – 6:00 PM</li>
-                      </ul>
-                    </li>
+          <h2 id="group-info-heading">Group Details</h2>
+          <ul id="group-info-content">
 
-                    <li><strong>Tuesday</strong>
-                      <ul>
-                        <li>MAT  2208: 8:00 AM  – 10:00 AM</li>
-                        <li>Cos 10009: 12:00 PM – 2:00 PM</li>
-                        <li>Cos 10026:  2:00 PM – 4:00 PM</li>
-                      </ul>
-                    </li>
+              <!--whole week time table-->
+              <li id="time-table">
+                <strong>Group Name:</strong> Three Aung One Wai
+                <ul>
+                  <li><strong>Monday</strong>
+                    <ul>
+                      <li>Cos 10004: 2:00 PM – 4:00 PM</li>
+                      <li>Cos 10009: 4:00 PM – 6:00 PM</li>
+                    </ul>
+                  </li>
 
-                    <li><strong>Wednesday</strong>
-                      <ul>
-                        <li>Cos 10026:  8:00 AM – 10:00 AM</li>
-                        <li>Cos 10004: 10:00 AM – 12:00 PM</li>
-                      </ul>
-                    </li>
+                  <li><strong>Tuesday</strong>
+                    <ul>
+                      <li>MAT  2208: 8:00 AM  – 10:00 AM</li>
+                      <li>Cos 10009: 12:00 PM – 2:00 PM</li>
+                      <li>Cos 10026:  2:00 PM – 4:00 PM</li>
+                    </ul>
+                  </li>
 
-                    <li><strong>Thursday</strong>
-                      <ul>
-                        <li>TNE 10006: 3:00 PM – 6:00 PM</li>
-                      </ul>
-                    </li>
+                  <li><strong>Wednesday</strong>
+                    <ul>
+                      <li>Cos 10026:  8:00 AM – 10:00 AM</li>
+                      <li>Cos 10004: 10:00 AM – 12:00 PM</li>
+                    </ul>
+                  </li>
 
-                    <li><strong>Friday</strong>
-                      <ul>
-                        <li>MAT  2208:  8:00 AM – 10:00 AM</li>
-                        <li>TNE 10006: 11:00 AM – 1:00 PM</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
+                  <li><strong>Thursday</strong>
+                    <ul>
+                      <li>TNE 10006: 3:00 PM – 6:00 PM</li>
+                    </ul>
+                  </li>
 
-                <li>
-                  <strong>In-Person Meetings:</strong>
-                  <ul>
-                    <li>Tuesday — 4:30 PM – 5:30 PM</li>
-                    <li>Wednesday — 1:00 PM – 2:00 PM</li>
-                  </ul>
-                </li>
+                  <li><strong>Friday</strong>
+                    <ul>
+                      <li>MAT  2208:  8:00 AM – 10:00 AM</li>
+                      <li>TNE 10006: 11:00 AM – 1:00 PM</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
 
-                <li>
-                  <strong>Communication Channels:</strong>
-                  <ul>
-                    <li>WhatsApp Group — Daily or as needed</li>
-                    <li>Zoom Online Discussion — Saturdays 8:00 PM – 9:15 PM</li>
-                    <li>In-Person — During and after class lectures</li>
-                  </ul>
-                </li>
+              <!--in person meating schedule-->
+              <li>
+                <strong>In-Person Meetings:</strong>
+                <ul>
+                  <li>Tuesday — 4:30 PM – 5:30 PM</li>
+                  <li>Wednesday — 1:00 PM – 2:00 PM</li>
+                </ul>
+              </li>
 
-                <li>
-                  <strong>Response Expectations:</strong>
-                  <ul>
-                    <li>Messages replied within 12 hours</li>
-                    <li>Members attend online discussions before 8:30 PM</li>
-                    <li>Inform team in advance if unavailable</li>
-                  </ul>
-                </li>
+              <!--communication channel-->
+              <li>
+                <strong>Communication Channels:</strong>
+                <ul>
+                  <li>WhatsApp Group — Daily or as needed</li>
+                  <li>Zoom Online Discussion — Saturdays 8:00 PM – 9:15 PM</li>
+                  <li>In-Person — During and after class lectures</li>
+                </ul>
+              </li>
 
-                <li>
-                  <strong>Project Timeline:</strong>
-                  <ul>
-                    <li>Week 4 — Discussion, task division, Jira planning, start Home page</li>
-                    <li>Week 5 — Finish Home page; start remaining pages and CSS</li>
-                    <li>Week 6 — Finalise pages, testing, documentation</li>
-                  </ul>
-                </li>
-              </ul>
-          </div>
+              <!--communication response expectation-->
+              <li>
+                <strong>Response Expectations:</strong>
+                <ul>
+                  <li>Messages replied within 12 hours</li>
+                  <li>Members attend online discussions before 8:30 PM</li>
+                  <li>Inform team in advance if unavailable</li>
+                </ul>
+              </li>
+
+              <!--project timeline-->
+              <li>
+                <strong>Project Timeline:</strong>
+                <ul>
+                  <li>Week 4 — Discussion, task division, Jira planning, start Home page</li>
+                  <li>Week 5 — Finish Home page; start remaining pages and CSS</li>
+                  <li>Week 6 — Finalise pages, testing, documentation</li>
+                </ul>
+              </li>
+          </ul>
         </section>
 
         <!-- ── GROUP PHOTO ── -->
         <section id="group-photo-section" aria-labelledby="group-photo-heading">
-          <div id="group-photo-img">
-            <figure>
-              
-              <img
-                src="resources/images/GP.jpeg"
-                alt="Group photo of Three Aung One Wai web development team"
-              />
-              <figcaption>
-                <strong>Three Aung One Wai</strong> &mdash; The web development team behind the 3A1W website project. 
-              </figcaption>
-            </figure>
-          </div>
+
+          <!--image and caption-->
+          <figure>
+            <img
+              src="resources/images/GP.jpeg"
+              alt="Group photo of Three Aung One Wai web development team"
+            />
+            <figcaption>
+              <strong>Three Aung One Wai</strong> &mdash; The web development team behind the 3A1W website project. 
+            </figcaption>
+          </figure>
+
+          <!--text and brief about the team-->
           <div id="group-photo-text">
             <h2 id="group-photo-heading">About Our Team</h2>
             <p>
@@ -165,14 +169,14 @@
 
           <!-- Member 1 -->
           <article id="member-nyan" aria-labelledby="nyan-heading">
-            <div id="nyan-img">
+            <div class="img">
               <img
                 src="resources/images/NPA.jpeg"
                 alt="Portrait photo of Nyan Phyo Aung"
                 
               />
             </div>
-            <div id="nyan-text">
+            <div class="text">
               <h3 id="nyan-heading">1. Nyan Phyo Aung</h3>
               <dl>
                 <dt>Individual Task</dt>
@@ -199,14 +203,14 @@
 
           <!-- Member 2 -->
           <article id="member-wai" aria-labelledby="wai-heading">
-            <div id="wai-img">
+            <div class="img">
               <img
                 src="resources/images/WPH.jpeg"
                 alt="Portrait photo of Wai Phyo Htet"
                 
               />
             </div>
-            <div id="wai-text">
+            <div class="text">
               <h3 id="wai-heading">2. Wai Phyo Htet</h3>
               <dl>
                 <dt>Individual Task</dt>
@@ -233,7 +237,7 @@
 
           <!-- Member 3 -->
           <article id="member-aung-khant" aria-labelledby="khant-heading">
-            <div id="khant-img">
+            <div class="img">
               <img
                 src="resources/images/AKZ.jpeg"
                 alt="Portrait photo of Aung Khant Zaw"
@@ -241,7 +245,7 @@
               
               />
             </div>
-            <div id="khant-text">
+            <div class="text">
               <h3 id="khant-heading">3. Aung Khant Zaw</h3>
               <dl>
                 <dt>Individual Task</dt>
@@ -268,14 +272,14 @@
 
           <!-- Member 4 -->
           <article id="member-htoo" aria-labelledby="htoo-heading">
-            <div id="htoo-img">
+            <div class="img">
               <img
                 src="resources/images/HA.jpeg"
                 alt="Portrait photo of Htoo Aung"
                 
               />
             </div>
-            <div id="htoo-text">
+            <div class="text">
               <h3 id="htoo-heading">4. Htoo Aung</h3>
               <dl>
                 <dt>Individual Task</dt>
@@ -303,9 +307,8 @@
 
         <!-- ── FUN FACTS TABLE ── -->
         <section id="fun-facts" aria-labelledby="fun-facts-heading">
-          
+          <h2 id="fun-facts-heading">Team Fun Facts</h2>
           <div id="fun-facts-text">
-            <h2 id="fun-facts-heading">Team Fun Facts</h2>
             <table>
               <caption>
                 Fun facts about the Three Aung One Wai team members — including dream jobs,
@@ -378,8 +381,6 @@
           <img
             src="resources/images/Meeting.jpeg"
             alt="Our Group in a high-tech office"
-            width="600"
-            height="400"
           />
         </div>
         <div id="join-text">
@@ -394,8 +395,8 @@
             development, and the chance to work on problems that genuinely matter.
           </p>
           <p>
-            <a href="jobs.html">Browse Open Roles</a> |
-            <a href="apply.html">Submit an Application</a>
+            <a class="btn" href="jobs.html">Browse Open Roles</a>
+            <a class="btn" href="apply.html">Submit an Application</a>
           </p>
         </div>
       </section>

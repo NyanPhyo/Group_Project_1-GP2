@@ -43,7 +43,8 @@
     <div class="jobs">
 
       <!--inputs to pair with respective job details-->
-      <input type="radio" name="job" id="job1" checked>
+      <input type="radio" name="job" id="null" checked>
+      <input type="radio" name="job" id="job1">
       <input type="radio" name="job" id="job2">
       <input type="radio" name="job" id="job3">
 
@@ -78,7 +79,13 @@
       <!-- I just made up those data but it is based on Payscale and Jobstreet Malaysia -->
       <div class="details">
         <!-- This is about job opening 1 -->
-        <article class="content d1"> 
+        <article class="content dummy">
+          <h2>Choose one of the jobs</h2>
+          <p id="dummy-text">Please Choose one of the jobs from left side to check the details. It wiil show you job details including key responsibilities, Essential requirements and preferable requirements.</p>
+        </article>
+
+        <article class="content d1">
+          <label class="backarrow" for="null"><i class="fa-solid fa-arrow-left"></i></label>
           <header>
             <p class="ref"><strong>Reference Number:</strong> CS202</p>
             <h1>Cybersecurity Analyst</h1>
@@ -119,6 +126,7 @@
 
         <!-- This is about job opening 2 -->
         <article class="content d2"> 
+          <label class="backarrow" for="null"><i class="fa-solid fa-arrow-left"></i></label>
           <div class="inner">
             <header>
               <p class="ref"><strong>Reference Number:</strong> PT206</p>
@@ -160,7 +168,8 @@
         </article>
 
         <!-- This is about job opening 3 -->
-        <article class="content d3"> 
+        <article class="content d3">
+          <label class="backarrow" for="null"><i class="fa-solid fa-arrow-left"></i></label> 
           <div class="inner">
             <header>
               <p class="ref"><strong>Reference Number:</strong> DF296</p>

@@ -1,4 +1,21 @@
-/* Choosen theme colors */
+/*
+
+filename: group project part 1 styling sheet
+
+author: Nyan Phyo Aung
+
+created: 13.4.2026
+
+last modified: 26.4.2026
+
+description: styling for all 4 pages of group project
+
+*/
+
+/* We used descendant selector style to be more readable and easy to recognize the content of html */
+
+
+/* Choosen theme colors and text color*/
 :root {
   --color-primary: darkblue;
   --color-theme: cyan;
@@ -11,11 +28,20 @@
   color: var(--color-text);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+ /* Prevents the whole page from shaking/scrolling sideways */
+html, body {
+  width: 100%;
+}
+
+ /* Ensures width: 100% actually means 100% */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 body{
   background-color: var(--color-bg);
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 /* navigation for all pages bar start here*/
@@ -52,6 +78,8 @@ nav .menu{
   flex: 6;
   display: flex;
 }
+
+/* use raido to mark the immediate data and label as a click */
 nav .menu input{
   visibility: hidden;
   display: none;
@@ -73,6 +101,8 @@ nav .menu .buttons{
   display: flex;
   width: 100%;
 }
+
+/* border buttom serve as indicator on which page you are in */
 nav .menu .buttons label{
   margin: 6px;
   flex: 2.5;
@@ -80,10 +110,14 @@ nav .menu .buttons label{
   opacity: 0.6;
   transition: border-color 0.3s ease, opacity 0.3s ease;
 }
+
+/* cyan light hover effect for menu buttons */
 nav .menu .buttons label:hover{
   opacity: 1;
   filter: drop-shadow(0 0 10px rgb(52, 195, 223)) drop-shadow(0 0 20px rgb(52, 195, 223));
 }
+
+/* implementaion radio input as short term memory */
 nav .menu input:nth-child(1):checked ~ .buttons label:nth-child(1),
 nav .menu input:nth-child(2):checked ~ .buttons label:nth-child(2),
 nav .menu input:nth-child(3):checked ~ .buttons label:nth-child(3),
@@ -94,7 +128,7 @@ nav .menu input:nth-child(4):checked ~ .buttons label:nth-child(4)
 }
 /* navigation bar for all page end here*/
 
-/* main flex to fill the page */
+/* main flex to fill the page to push footer to the bottom*/
 main{
   flex: 1;
 }
@@ -102,15 +136,14 @@ main{
 footer {
   margin-top: 1em;
   width: 100%;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   background-color: rgba(20, 35, 40, 0.9);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+/* github, jira and email icons with links on left */
 footer .socials {
   flex: 3;
   padding: 0.2em;
@@ -118,6 +151,7 @@ footer .socials {
   padding-left: 1.5em;
 }
 
+/* right side credits */
 footer .credits {
   flex: 7;
   color: rgb(218, 218, 218);
@@ -129,7 +163,7 @@ footer .credits {
 }
 
 footer .socials img {
-  width: 1.1em;
+  width: 25px;
   border: 2px solid rgb(164, 164, 164);
   border-radius: 7px;
   padding: 2px;
@@ -146,6 +180,8 @@ footer .socials img {
   align-items: center;
   justify-content: center;
 }
+
+/* ablosute positioned banner to serves as video background z-index -1 */
 .banner .banner-bg{
   position: absolute;
   width: 100%;
@@ -162,7 +198,7 @@ footer .socials img {
   color: var(--color-text);
   text-align: center;
 }
-.banner .text h1{
+.banner .text h2{
   font-size: 3em;
   margin-bottom: 0.5em;
   color: rgb(208, 208, 208);
@@ -178,7 +214,8 @@ footer .socials img {
   width: 50%;
   transform: translate(50%);
 }
-/* all button use same design */
+
+/* all button use same design and hover effect*/
 .btn{
   color: rgb(49, 49, 49);
   text-decoration: none;
@@ -196,16 +233,19 @@ footer .socials img {
 /* banner of home page end here*/
 
 /* info cards of home page start here */
+/* wrapper so that i can group and center the boxes without effecting main tag */
 .info-wrapper{
   display: flex;
   justify-content: center;
   margin-top: 3em;
 }
+
+/* grid display is used for variety */
 .info{
   display: grid;
   width: min(1200px, 85%);
   grid-template-columns: repeat(3, 1fr);
-  gap: 4rem;
+  gap: 3rem;
   padding: 2em;
 }
 .info .card{
@@ -226,24 +266,24 @@ footer .socials img {
   color: rgb(172, 172, 172);
 }
 
-
 /* Jobs page styling start here */
 .jobs{
   margin-top: 1em;
   display: flex;
-  min-height: 100vh;
+  overflow-x: hidden;
+  height: 100vh;
 }
 
 /* sidebar left side of job page start here */
+/* same radio system to serve as short term memory */
 .jobs input{
   display: none;
   visibility: hidden;
 }
 .jobs .sidebar{
   float: left;
-  flex: 3;
-  margin: 1em;
-  overflow-y: auto;
+  flex: 4;
+  margin-left: 0.5em;
 }
 .jobs .sidebar h2{
   font-size: 1.8em;
@@ -251,8 +291,10 @@ footer .socials img {
   text-align: center;
   -webkit-text-stroke: 1px rgba(0, 255, 255, 0.4);
 }
+
+/* font color and size adjustment to not look boring */
 .jobs .sidebar .job-card{
-  width: auto;
+  width: 80%;
   display: inline-block;
   border: 2px solid var(--color-theme);
   padding: 0.6em;
@@ -280,11 +322,7 @@ footer .socials img {
   font-size: 0.8em;
   color: rgba(226, 226, 226, 0.9);
 }
-.jobs .sidebar::-webkit-scrollbar,
-.jobs .details::-webkit-scrollbar {
-  display: none;
-}
-/* sidebar left size of job page end her */
+/* sidebar left size of job page end here */
 
 /* detail part (right side) start here */
 .jobs .details{
@@ -293,11 +331,11 @@ footer .socials img {
   flex: 8;
   border: 2px solid rgb(186, 186, 186);
   border-radius: 7px;
-  margin: 1em;
+  margin: 1.5em 0.7em;
   padding: 1em;
   color: rgb(200, 200, 200);
-  overflow-y: auto;
-  height: fit-content;
+  align-self: flex-start;
+  height: auto;
 }
 .jobs .details .content ul,ol{
   list-style-position: inside;
@@ -309,6 +347,7 @@ footer .socials img {
 }
 .jobs .details article{
   display: none;
+  position: relative;
 }
 .jobs .details .content .ref{
   color: rgb(213, 157, 14);
@@ -332,14 +371,19 @@ footer .socials img {
 .jobs .details .content header p:nth-of-type(4){
   color: rgba(0, 209, 209, 0.9);
 }
+
+/* conneting radio input with content */
 .jobs input:nth-child(1):checked ~ .details article:nth-child(1),
 .jobs input:nth-child(2):checked ~ .details article:nth-child(2),
-.jobs input:nth-child(3):checked ~ .details article:nth-child(3){
+.jobs input:nth-child(3):checked ~ .details article:nth-child(3),
+.jobs input:nth-child(4):checked ~ .details article:nth-child(4){
   display: block;
 }
-.jobs input:nth-child(1):checked ~ aside label:nth-of-type(1),
-.jobs input:nth-child(2):checked ~ aside label:nth-of-type(2),
-.jobs input:nth-child(3):checked ~ aside label:nth-of-type(3){
+
+/* selected effect */
+.jobs input:nth-child(2):checked ~ aside label:nth-of-type(1),
+.jobs input:nth-child(3):checked ~ aside label:nth-of-type(2),
+.jobs input:nth-child(4):checked ~ aside label:nth-of-type(3){
   opacity: 1;
   filter: drop-shadow(0 0 10px rgb(48, 181, 207));
 }
@@ -348,6 +392,18 @@ footer .socials img {
 .jobs aside label:nth-of-type(3):hover{
   opacity: 1;
   filter: drop-shadow(0 0 10px rgb(48, 181, 207));
+}
+
+/* back arrow for later responsiveness for phones */
+.jobs .backarrow{
+  display: none;
+  opacity: 0.8;
+}
+
+/* a placeholder text */
+#dummy-text{
+  line-height: 2em;
+  font-size: 1.1em;
 }
 /* detail part (right side) end here */
 /* jobpage styling end here */
@@ -365,10 +421,12 @@ footer .socials img {
 }
 .apply_page form{
   padding: 2em;
-  width: min(1000px, 55%);
+  width: min(800px, 80%);
   border: 1px solid var(--color-theme);
   border-radius: 1em;
 }
+
+/* all input field color and style change to match the website theme */
 .apply_page form input, select, textarea{
   background-color: transparent;
   border-radius: 4px;
@@ -379,6 +437,8 @@ footer .socials img {
   background-color: #0f1917;
   color: white;
 }
+
+/* all form elements are set to flex so that no extra responsive needed */
 .apply_page form fieldset{
   border: 1px solid yellow;
   border-radius: 1em;
@@ -405,3 +465,351 @@ footer .socials img {
 }
 
 /* apply page styling end here */
+
+
+
+/* about page styling start here */
+/* page title */
+.member-info #team-section-heading{
+  text-align: center;
+  -webkit-text-stroke: 1px var(--color-theme);
+}
+.member-info #team-section-text{
+  width: 80%;
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+  margin-top: 1em;
+  border-bottom: 1px dashed yellow;
+}
+
+/* group detail section start */
+.about-page #web-team{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-page #group-info{
+  list-style: inside;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+.about-page #group-info #group-info-content{
+  border-radius: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  width: min(1000px, 85%);
+}
+
+/* first and outer most list of nested list */
+.about-page #group-info #group-info-content > li{
+  flex: 1 1 calc(48% - 1rem);
+  border: 1px solid var(--color-theme);
+  border-radius: 1em;
+  list-style-type: "🌐";
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+/* second and middle list of nested list */
+.about-page #group-info #group-info-content > li > ul> li{
+  list-style-type: "✨";
+  padding-left: 1em;
+}
+.about-page #group-info #group-info-content #time-table{
+  flex: 100%;
+}
+.about-page #group-info #time-table > ul{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2em;
+  padding: 0.5em;
+}
+.about-page #group-info #time-table > ul > li{
+  padding: 0.5em;
+}
+
+/* third and innermost list of nested list */
+.about-page #group-info #time-table > ul > li > ul{
+  padding-left: 1em;
+  margin-left: 0;
+  list-style-type: "🕒";
+}
+/* group detail section end */
+
+/* group photo section start */
+.about-page #group-photo-section{
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid grey;
+  border-top: 1px solid grey;
+  align-items: center;
+  background-color: rgba(43, 78, 81, 0.3);
+  padding: 1em 0;
+}
+.about-page #group-photo-section figure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-page #group-photo-section img{
+  width: 80%;
+  border-radius: 50%;
+}
+.about-page #group-photo-section #group-photo-text{
+  padding: 1.5em 7em;
+}
+.about-page #group-photo-section #group-photo-text p{
+  color: rgba(195, 195, 195, 0.9);
+}
+
+.about-page #group-photo-section #group-photo-heading{
+  color: var(--color-theme);
+} 
+.about-page #group-photo-section strong{
+  color: goldenrod;
+}
+/* group photo section end */
+
+/* each member profiles start */
+.about-page .member-info #member-profiles{
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+}
+.about-page .member-info #member-profiles #profiles-heading{
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+.about-page .member-info #member-profiles article{
+  width: 80%;
+  border: 1px solid var(--color-theme);
+  border-radius: 25px;
+  display: flex;
+  margin: 1em 0;
+  padding: 1em;
+}
+.about-page .member-info #member-profiles article .img{
+  flex:3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-page .member-info #member-profiles article img{
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  border: 10px solid rgba(174, 174, 174, 0.4);
+  border-radius: 50%;
+}
+.about-page .member-info #member-profiles article .text{
+  flex: 7;
+}
+.about-page .member-info #member-profiles article .text h3{
+  color: var(--color-theme)
+}
+.about-page .member-info #member-profiles article .text dt{
+  font-family: fantasy;
+  color: rgba(255, 255, 255, 0.742);
+}
+.about-page .member-info #member-profiles article .text dd,blockquote,p{
+  color: rgba(255, 255, 255, 0.633);
+}
+.about-page .member-info #member-profiles article .text em{
+  color: goldenrod;
+}
+/* each member profiles end */
+
+/* fun facts table */
+/* table is made to be able to scroll seperately so as to not broke whole page viewport */
+#fun-facts {
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #e5e7eb;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+#fun-facts h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: cyan;
+  letter-spacing: 1px
+}
+#fun-facts #fun-facts-text {
+  max-width: 1000px;
+  margin: 20px auto;
+  background: #111827;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(34, 211, 238, 0.1);
+  overflow-x: auto;
+  width: 100%;
+}
+#fun-facts #fun-facts-text table {
+  width: 100%;
+  min-width: 900px; 
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 12px;
+}
+#fun-facts #fun-facts-text caption {
+  caption-side: bottom;
+  font-size: 0.9rem;
+  color: #9ca3af;
+  margin-top: 15px;
+}
+#fun-facts #fun-facts-text thead {
+  background: linear-gradient(90deg, #06b6d4, #22d3ee);
+}
+#fun-facts #fun-facts-text thead th {
+  padding: 14px;
+  text-align: left;
+  color: #020617;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+#fun-facts #fun-facts-text tbody tr {
+  border-bottom: 1px solid rgba(34, 211, 238, 0.15);
+  transition: 0.3s ease;
+}
+#fun-facts #fun-facts-text tbody tr:hover {
+  background: rgba(34, 211, 238, 0.08);
+}
+#fun-facts #fun-facts-text tbody td,
+#fun-facts #fun-facts-text tbody th {
+  padding: 14px;
+  font-size: 0.9rem;
+}
+#fun-facts #fun-facts-text tbody th {
+  color: #22d3ee;
+  font-weight: 500;
+  white-space: nowrap;
+}
+#fun-facts #fun-facts-text tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+#fun-facts #fun-facts-text table thead tr th:first-child {
+  border-top-left-radius: 12px;
+}
+#fun-facts #fun-facts-text table thead tr th:last-child {
+  border-top-right-radius: 12px;
+}
+
+#join-us{
+  margin: 2em;
+  border: 5px solid rgba(147, 147, 147, 0.744);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 2em;
+}
+#join-us #join-img img{
+  width: 300px;
+  height: 200px;
+  border: 1px solid var(--color-theme);
+  border-radius: 15px;
+  margin-right: 2em;
+}
+#join-us #join-heading{
+  color: var(--color-theme);
+}
+/* about page styling end here */
+
+/* all responsive adjustment here*/
+/* mostly width adjustments, size adjustments and flex&grid box column adjustments */
+@media (max-width: 1050px){  
+  .about-page #group-info #time-table > ul{grid-template-columns: repeat(2, 1fr);}
+  .about-page .member-info #member-profiles article{
+    flex-direction: column;
+    gap: 2em;
+  }
+}
+@media (max-width: 830px){
+  .info{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .jobs .sidebar .job-card{width: 100%;}
+  .about-page #group-photo-section #group-photo-text{
+  padding: 1.5em 3em;
+}
+}
+@media (max-width: 670px) {
+  #join-us{
+    flex-direction: column;
+    gap: 2em;
+  }
+  #join-us #join-img img{
+    margin-right: 0;
+  }
+  figcaption{
+    margin: 1em 3em;
+  }
+  .banner .text .description{
+    width: 80%;
+    transform: translate(11%);
+  }
+}
+
+/* major adjustment 2 layer 1 for jobs and 1 for description for narrow screens */
+/* empty radio and arrow icon is used here */
+@media (max-width: 600px) {
+  .info{
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  .about-page #group-info #time-table > ul{grid-template-columns: repeat(1, 1fr);}
+  .about-page #group-info #group-info-content > li{
+    flex: 100%;
+  }
+  .jobs{
+    min-height: 100vh;
+  }
+  .jobs .sidebar{
+    z-index: 1;
+  }
+  .jobs .sidebar .job-card{width: 98%;}
+  .jobs .details{
+    width: 100%;
+    min-height: 0;
+    height: auto;
+    position: absolute;
+    z-index: 2;
+    padding-left: 1.5em;
+    margin: 0;
+    background-color: rgb(71, 71, 71);
+    overflow: hidden;
+  }
+  .jobs .backarrow{
+    display: block;
+    position: absolute;
+    transform: translateX(-100%);
+    padding: 2px 5px;
+  }
+  .jobs .backarrow:hover{
+    background-color: rgba(160, 156, 156, 0.775);
+    border-radius: 10px;
+  }
+  .jobs input:nth-child(1):checked ~ .details{
+    display: none;
+  }
+}
+@media (max-width: 530px){
+  #join-us #join-img img{
+  width: 220px;
+  height: 140px;
+  }
+  nav .logo{
+  flex: 1;
+  padding-right: 1em;
+  }
+  .info{
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+}
